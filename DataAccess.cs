@@ -18,7 +18,7 @@ namespace StudentDB
 
             var db = new SQLiteConnection(path);
             db.CreateTable<Student>();
-            var query = db.Table<Student>().Where(v => v.FirstName.StartsWith("W"));
+            var query = db.Table<Student>();
 
             foreach (var s in query)
             {
@@ -30,7 +30,34 @@ namespace StudentDB
 
         public static void EditStudent(Student student)
         {
+            var db = new SQLiteConnection(path);
+            db.CreateTable<Student>();
+            db.Close();
+        }
 
+        public static List<Student> SearchStudent(string firstName, string lastName, string indexNumber)
+        {
+            List<Student> searchedStudents = new List<Student>();
+            var db = new SQLiteConnection(path);
+            db.CreateTable<Student>();
+            var query = db.Table<Student>()
+                .Where(s => s.FirstName.Contains(firstName) && s.LastName.Contains(lastName) && s.IndexNumber.Contains(indexNumber));
+
+            foreach(var s in query)
+            {
+                searchedStudents.Add(s);
+            }
+            db.Close();
+
+            return searchedStudents;
+        }
+
+        public static void AddStudent(Student student)
+        {
+            var db = new SQLiteConnection(path);
+            db.CreateTable<Student>();
+            db.Insert(student);
+            db.Close();
         }
     }
 }

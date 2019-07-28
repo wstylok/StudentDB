@@ -26,17 +26,17 @@
         <Label Content="Student Management System" FontSize="20" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" Margin="10 10 10 15" />
         <Label Name="FirstName" Content="Imię:" Width="100" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="10 5 10 5" />
         <Label Name="LastName" Content="Nazwisko:" Width="100" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="10 5 10 5" />
-        <Label Name="DayOfBirth" Content="Data urodzenia:" Width="100" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" />
+        <!--<Label Name="DayOfBirth" Content="Data urodzenia:" Width="100" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" />-->
         <Label Name="IndexNumber" Content="Nr indeksu:" Width="100" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="10 5 10 5" />
 
         <TextBox Name="FirstNameText" Width="150" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10 5 10 5" />
         <TextBox Name="LastNameText" Width="150" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10 5 10 5" />
-        <TextBox Name="DayOfBirthText" Width="150" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" />
+        <!--<TextBox Name="DayOfBirthText" Width="150" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" />-->
         <TextBox Name="IndexNumberText" Width="150" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="10 5 10 5" />
 
-        <!--<Button Name="AddBtn" Content="Dodaj studenta" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" Click="AddBtn_Click" />-->
+        <Button Name="SearchBtn" Content="Szukaj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" Click="SearchBtn_Click" />
         <Button Name="EditBtn" Content="Edytuj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 5 10 15" />
-        <Button Name="AddGradeBtn" Content="Dodaj ocenę" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 5 10 15" />
+        <Button Name="AddBtn" Content="Dodaj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 5 10 15" Click="AddBtn_Click" />
         <Button Name="DeleteBtn" Content="Usuń" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10 5 10 15" />
 
         <ListBox Name="Results" DataContext="" Grid.Column="2" Grid.Row="1" Grid.RowSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 5 10 5" Width="350" Height="330" />
