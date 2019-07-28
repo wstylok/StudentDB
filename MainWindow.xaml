@@ -34,11 +34,11 @@
         <TextBox Name="DayOfBirthText" Width="150" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" />
         <TextBox Name="IndexNumberText" Width="150" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="10 5 10 5" />
 
-        <Button Name="SearchBtn" Content="Szukaj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" />
+        <!--<Button Name="AddBtn" Content="Dodaj studenta" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" Click="AddBtn_Click" />-->
         <Button Name="EditBtn" Content="Edytuj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 5 10 15" />
         <Button Name="AddGradeBtn" Content="Dodaj ocenę" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 5 10 15" />
         <Button Name="DeleteBtn" Content="Usuń" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10 5 10 15" />
 
-        <TextBlock Name="Results" Text="Wyniki wyszukiwania..." Grid.Column="2" Grid.Row="1" Grid.RowSpan="6" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 5 10 5" />
+        <ListBox Name="Results" DataContext="" Grid.Column="2" Grid.Row="1" Grid.RowSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 5 10 5" Width="350" Height="330" />
     </Grid>
 </Window>

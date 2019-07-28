@@ -20,9 +20,33 @@ namespace StudentDB
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Student> students = new List<Student>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            LoadStudents();
+        }
+
+        private void LoadStudents()
+        {
+            //TODO podłączenie bazy
+            students.Add(new Student { FirstName = "Adam", LastName = "Kowalski", IndexNumber = "392K3E", DateOfBirth = new DateTime(2000, 1, 3).ToShortDateString(), Grades = "3, 5, 4.5" });
+            students.Add(new Student { FirstName = "Wojciech", LastName = "Stylok", IndexNumber = "194AC4", DateOfBirth = new DateTime(1994, 11, 6).ToShortDateString(), Grades = "" });
+            foreach(Student s in DataAccess.LoadFromDb())
+            {
+                students.Add(s);
+            }
+
+            DisplayStudents();
+        }
+
+        private void DisplayStudents()
+        {
+            Results.ItemsSource = null;
+            Results.ItemsSource = students;
+            Results.DisplayMemberPath = "StudentInfo";
         }
     }
 }

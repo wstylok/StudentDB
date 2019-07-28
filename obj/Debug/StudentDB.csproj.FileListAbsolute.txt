@@ -13,3 +13,14 @@ C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.csproj.Gene
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.csproj.CoreCompileInputs.cache
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.exe
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.pdb
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\StudentsDB.db
+C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB_Content.g.cs
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\x86\e_sqlite3.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\x64\e_sqlite3.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLite-net.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\stylow\source\repos\StudentDB\StudentDB\bin\Debug\SQLite-net.xml
+C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.csproj.CopyComplete
