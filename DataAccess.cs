@@ -35,13 +35,13 @@ namespace StudentDB
             db.Close();
         }
 
-        public static List<Student> SearchStudent(string firstName, string lastName, string indexNumber)
+        public static List<Student> SearchStudent(string firstName, string lastName, string indexNumber, string date)
         {
             List<Student> searchedStudents = new List<Student>();
             var db = new SQLiteConnection(path);
             db.CreateTable<Student>();
             var query = db.Table<Student>()
-                .Where(s => s.FirstName.Contains(firstName) && s.LastName.Contains(lastName) && s.IndexNumber.Contains(indexNumber));
+                .Where(s => s.FirstName.Contains(firstName) && s.LastName.Contains(lastName) && s.IndexNumber.Contains(indexNumber) && s.DateOfBirth.Contains(date));
 
             foreach(var s in query)
             {

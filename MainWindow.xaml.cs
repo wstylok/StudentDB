@@ -31,11 +31,8 @@ namespace StudentDB
 
         private void LoadStudents()
         {
-            Results.DataContext = "";
-            //TODO podłączenie bazy
-            //students.Add(new Student { FirstName = "Adam", LastName = "Kowalski", IndexNumber = "392K3E", DateOfBirth = new DateTime(2000, 1, 3).ToShortDateString(), Grades = "3, 5, 4.5" });
-            //students.Add(new Student { FirstName = "Wojciech", LastName = "Stylok", IndexNumber = "194AC4", DateOfBirth = new DateTime(1994, 11, 6).ToShortDateString(), Grades = "" });
-            foreach(Student s in DataAccess.LoadFromDb())
+            students.Clear();
+            foreach (Student s in DataAccess.LoadFromDb())
             {
                 students.Add(s);
             }
@@ -55,9 +52,10 @@ namespace StudentDB
             string firstName = FirstNameText.Text;
             string lastName = LastNameText.Text;
             string indexNumber = IndexNumberText.Text;
-            
+            string dateOfBirth = DayOfBirthText.SelectedDate.ToString();
+
             students.Clear();
-            foreach(Student s in DataAccess.SearchStudent(firstName, lastName, indexNumber))
+            foreach(Student s in DataAccess.SearchStudent(firstName, lastName, indexNumber, dateOfBirth))
             {
                 students.Add(s);
             }
@@ -69,12 +67,21 @@ namespace StudentDB
             string firstName = FirstNameText.Text;
             string lastName = LastNameText.Text;
             string indexNumber = IndexNumberText.Text;
+            string dateOfBirth = DayOfBirthText.SelectedDate.ToString();
 
-            Student student = new Student { FirstName = firstName, LastName = lastName, IndexNumber = indexNumber };
-            DataAccess.AddStudent(student);
+            Student student = new Student();
+            if (firstName != "" && lastName != "" && indexNumber != "" && dateOfBirth != "")
+            {
+                student.FirstName = firstName;
+                student.LastName = lastName;
+                student.IndexNumber = indexNumber;
+                student.DateOfBirth = dateOfBirth;
+                DataAccess.AddStudent(student);
+            }
             FirstNameText.Text = null;
             LastNameText.Text = null;
             IndexNumberText.Text = null;
+            DayOfBirthText.SelectedDate = null;
 
             LoadStudents();
         }
