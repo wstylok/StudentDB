@@ -1,0 +1,45 @@
+﻿<Window x:Class="StudentDB.EditStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDB"
+        mc:Ignorable="d"
+        Title="EditStudentWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Student Management System" FontSize="20" Grid.Column="0" Grid.ColumnSpan="3"  Grid.Row="0" HorizontalAlignment="Center" Margin="10 10 10 15" />
+        <Label Name="StudentNameText" Content="Edytuj studenta: " FontSize="20" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Center" Margin="10 10 10 15" />
+
+        <Label Name="FirstNameText" Content="Nowe imię: " Grid.Column="0" Grid.Row="2" Width="130" Height="25" HorizontalAlignment="Right" Margin="10 10 10 15" />
+        <Label Name="LastNameText" Content="Nowe nazwisko: " Grid.Column="0" Grid.Row="3" Width="130" Height="25" HorizontalAlignment="Right" Margin="10 10 10 15" />
+        <Label Name="DayOfBirthText" Content="Nowa data urodzenia: " Grid.Column="0" Grid.Row="4" Width="130" Height="25" HorizontalAlignment="Right" Margin="10 10 10 15" />
+        <Label Name="IndexNumberText" Content="Nowy numer indeksu: " Grid.Column="0" Grid.Row="5" Width="130" Height="25" HorizontalAlignment="Right" Margin="10 10 10 15" />
+
+        <TextBox Name="ChangeFirstNameText" Width="200" Height="30" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 10 10" />
+        <TextBox Name="ChangeLastNameText" Width="200" Height="30" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 10 10" />
+        <DatePicker Name="ChangeDayOfBirthText" Width="200" Height="30" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 10 10" />
+        <TextBox Name="ChangeIndexNumberText" Width="200" Height="30" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 10 10" />
+
+        <Button Name="ChangeFirstName" Content="Zmień" Width="100" Height="30" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 10 10 10" Click="ChangeFirstName_Click" />
+        <Button Name="ChangeLastName" Content="Zmień" Width="100" Height="30" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 10 10 10" Click="ChangeLastName_Click" />
+        <Button Name="ChangeDayOfBirth" Content="Zmień" Width="100" Height="30" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 10 10 10" Click="ChangeDayOfBirth_Click" />
+        <Button Name="ChangeIndexNumber" Content="Zmień" Width="100" Height="30" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 10 10 10" Click="ChangeIndexNumber_Click" />
+        
+        <Button Name="SaveBtn" Content="Zapisz" Width="100" Height="50" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SaveBtn_Click" Margin="10 10 10 15" />
+        <Button Name="CancelEditBtn" Content="Anuluj" Width="100" Height="50" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Top" Click="CancelEditBtn_Click" Margin="10 10 10 15" />
+    </Grid>
+</Window>

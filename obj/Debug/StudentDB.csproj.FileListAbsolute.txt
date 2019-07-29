@@ -26,3 +26,5 @@ C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.csproj.Copy
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.exe
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.pdb
 C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\StudentDB.csprojAssemblyReference.cache
+C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\EditStudentWindow.g.cs
+C:\Users\stylow\source\repos\StudentDB\StudentDB\obj\Debug\EditStudentWindow.baml

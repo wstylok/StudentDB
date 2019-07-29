@@ -112,5 +112,12 @@ namespace StudentDB
             AddGradeWindow addGradeWindow = new AddGradeWindow();
             addGradeWindow.Show();
         }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+            selectedStudentIndex = Results.SelectedIndex;
+            EditStudentWindow editStudentWindow = new EditStudentWindow();
+            editStudentWindow.Show();
+        }
     }
 }

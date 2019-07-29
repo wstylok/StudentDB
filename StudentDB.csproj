@@ -76,8 +76,15 @@
       <DependentUpon>AddGradeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="EditStudentWindow.xaml.cs">
+      <DependentUpon>EditStudentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <Page Include="AddGradeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditStudentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

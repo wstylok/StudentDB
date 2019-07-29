@@ -27,10 +27,29 @@ namespace StudentDB
             return students;
         }
 
-        public static void EditStudent(Student student)
+        public static void EditStudent(int index, Student stu)
         {
+            int studentId = students[index].Id;
             var db = new SQLiteConnection(path);
+            Student student = new Student();
             db.CreateTable<Student>();
+            var query = db.Table<Student>().Where(s => s.Id == studentId);
+            foreach (var s in query)
+            {
+                student = s;
+            }
+            //student = stu;
+            if (stu.FirstName != null)
+                student.FirstName = stu.FirstName;
+            if (stu.LastName != null)
+                student.LastName = stu.LastName;
+            if (stu.DateOfBirth != null)
+                student.DateOfBirth = stu.DateOfBirth;
+            if (stu.IndexNumber != null)
+                student.IndexNumber = stu.IndexNumber;
+
+            student.Id = studentId;
+            db.Update(student);
             db.Close();
         }
 
@@ -74,8 +93,8 @@ namespace StudentDB
             var db = new SQLiteConnection(path);
             Student student = new Student();
             db.CreateTable<Student>();
-            var query = db.Table<Student>().Where(s=>s.Id==studentId);
-            foreach(var s in query)
+            var query = db.Table<Student>().Where(s => s.Id == studentId);
+            foreach (var s in query)
             {
                 student = s;
             }
