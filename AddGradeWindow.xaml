@@ -1,0 +1,28 @@
+﻿<Window x:Class="StudentDB.AddGradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentDB"
+        mc:Ignorable="d"
+        Title="AddGradeWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Student Management System" FontSize="20" Grid.Column="0"  Grid.Row="0" HorizontalAlignment="Center" Margin="10 10 10 15" />
+        <Label Name="StudentNameText" Content="Dodaj ocenę: " FontSize="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="10 10 10 15" />
+
+        <TextBox Name="GradeToAddText" Grid.Column="0" Grid.Row="2" Width="100" HorizontalAlignment="Center" Margin="10 10 10 15" />
+
+        <Button Name="AddGradeBtn" Content="Zapisz" Width="100" Height="50" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AddGradeBtn_Click" Margin="10 10 10 15" />
+        <Button Name="cancelAddGradeBtn" Content="Anuluj" Width="100" Height="50" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Click="CancelAddGradeBtn_Click" Margin="10 10 10 15" />
+    </Grid>
+</Window>

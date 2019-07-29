@@ -79,9 +79,24 @@ namespace StudentDB
             {
                 student = s;
             }
-            student.Grades += (grade + " ");
+            student.Grades += grade + "  ";
             db.Update(student);
             db.Close();
+        }
+
+        public static string GetStudentFullName(int id)
+        {
+            int studentId = students[id].Id;
+            var db = new SQLiteConnection(path);
+            Student student = new Student();
+            db.CreateTable<Student>();
+            var query = db.Table<Student>().Where(s => s.Id == studentId);
+            foreach (var s in query)
+            {
+                student = s;
+            }
+
+            return $"{student.FirstName} {student.LastName}";
         }
     }
 }

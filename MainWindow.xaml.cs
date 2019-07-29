@@ -21,7 +21,7 @@ namespace StudentDB
     public partial class MainWindow : Window
     {
         public List<Student> students = new List<Student>();
-
+        static int selectedStudentIndex;
 
         public MainWindow()
         {
@@ -30,7 +30,7 @@ namespace StudentDB
             LoadStudents();
         }
 
-        private void LoadStudents()
+        public void LoadStudents()
         {
             students.Clear();
             foreach (Student s in DataAccess.LoadFromDb())
@@ -101,14 +101,16 @@ namespace StudentDB
             AddGradeBtn.Visibility = Visibility;
         }
 
+        public static int SelectedStudentIndex()
+        {
+            return selectedStudentIndex;
+        }
+
         private void AddGradeBtn_Click(object sender, RoutedEventArgs e)
         {
-            int index = Results.SelectedIndex;
-            string grade = "4.5";
-            DataAccess.AddGrade(index, grade);
-
-            students.Clear();
-            LoadStudents();
+            selectedStudentIndex = Results.SelectedIndex;
+            AddGradeWindow addGradeWindow = new AddGradeWindow();
+            addGradeWindow.Show();
         }
     }
 }
