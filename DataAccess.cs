@@ -42,7 +42,7 @@ namespace StudentDB
             var query = db.Table<Student>()
                 .Where(s => s.FirstName.Contains(firstName) && s.LastName.Contains(lastName) && s.IndexNumber.Contains(indexNumber) && s.DateOfBirth.Contains(date));
 
-            foreach(var s in query)
+            foreach (var s in query)
             {
                 searchedStudents.Add(s);
             }
@@ -63,8 +63,24 @@ namespace StudentDB
         {
             int studentId = students[index].Id;
             var db = new SQLiteConnection(path);
-            db.Execute($"delete from Student where Id = {studentId}");
             db.CreateTable<Student>();
+            db.Execute($"delete from Student where Id = {studentId}");
+            db.Close();
+        }
+
+        public static void AddGrade(int index, string grade)
+        {
+            int studentId = students[index].Id;
+            var db = new SQLiteConnection(path);
+            Student student = new Student();
+            db.CreateTable<Student>();
+            var query = db.Table<Student>().Where(s=>s.Id==studentId);
+            foreach(var s in query)
+            {
+                student = s;
+            }
+            student.Grades += (grade + " ");
+            db.Update(student);
             db.Close();
         }
     }

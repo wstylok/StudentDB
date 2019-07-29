@@ -56,7 +56,7 @@ namespace StudentDB
             string dateOfBirth = DayOfBirthText.SelectedDate.ToString();
 
             students.Clear();
-            foreach(Student s in DataAccess.SearchStudent(firstName, lastName, indexNumber, dateOfBirth))
+            foreach (Student s in DataAccess.SearchStudent(firstName, lastName, indexNumber, dateOfBirth))
             {
                 students.Add(s);
             }
@@ -89,7 +89,6 @@ namespace StudentDB
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
-            Student student = new Student();
             int index = Results.SelectedIndex;
             DataAccess.DeleteStudent(index);
 
@@ -99,7 +98,17 @@ namespace StudentDB
 
         private void Results_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            AddGradeBtn.Visibility = Visibility;
+        }
 
+        private void AddGradeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int index = Results.SelectedIndex;
+            string grade = "4.5";
+            DataAccess.AddGrade(index, grade);
+
+            students.Clear();
+            LoadStudents();
         }
     }
 }
