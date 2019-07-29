@@ -11,11 +11,10 @@ namespace StudentDB
     {
         private static string path = @".\StudentsDB.db";
 
-       
+        private static List<Student> students = new List<Student>();
+
         public static List<Student> LoadFromDb()
         {
-            List<Student> students = new List<Student>();
-
             var db = new SQLiteConnection(path);
             db.CreateTable<Student>();
             var query = db.Table<Student>();
@@ -57,6 +56,15 @@ namespace StudentDB
             var db = new SQLiteConnection(path);
             db.CreateTable<Student>();
             db.Insert(student);
+            db.Close();
+        }
+
+        public static void DeleteStudent(int index)
+        {
+            int studentId = students[index].Id;
+            var db = new SQLiteConnection(path);
+            db.Execute($"delete from Student where Id = {studentId}");
+            db.CreateTable<Student>();
             db.Close();
         }
     }

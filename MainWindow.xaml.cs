@@ -22,6 +22,7 @@ namespace StudentDB
     {
         public List<Student> students = new List<Student>();
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -84,6 +85,21 @@ namespace StudentDB
             DayOfBirthText.SelectedDate = null;
 
             LoadStudents();
+        }
+
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Student student = new Student();
+            int index = Results.SelectedIndex;
+            DataAccess.DeleteStudent(index);
+
+            students.Clear();
+            LoadStudents();
+        }
+
+        private void Results_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
