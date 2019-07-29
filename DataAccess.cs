@@ -38,7 +38,6 @@ namespace StudentDB
             {
                 student = s;
             }
-            //student = stu;
             if (stu.FirstName != null)
                 student.FirstName = stu.FirstName;
             if (stu.LastName != null)

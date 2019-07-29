@@ -34,7 +34,7 @@
         <DatePicker Name="DayOfBirthText" Width="150" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="10 5 10 5" SelectedDateFormat="Short" />
         <TextBox Name="IndexNumberText" Width="150" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="10 5 10 5" />
 
-        <Button Name="SearchBtn" Content="Szukaj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" Click="SearchBtn_Click" />
+        <Button Name="SearchBtn" Content="Szukaj/Odśwież" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 20 10 5" Click="SearchBtn_Click" />
         <Button Name="EditBtn" Content="Edytuj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 5 10 15" Click="EditBtn_Click" />
         <Button Name="AddBtn" Content="Dodaj" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10 5 10 15" Click="AddBtn_Click" />
         <Button Name="AddGradeBtn" Content="Dodaj ocenę" Width="100" Height="50" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10 10 10 15" Visibility="Hidden" Click="AddGradeBtn_Click" />
